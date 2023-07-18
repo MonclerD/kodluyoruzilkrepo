@@ -1,0 +1,64 @@
+Proje 1
+[22,27,16,2,18,6] -> Insertion Sort
+
+1) Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+
+Yukarıda verilen dizinin sort türü "Insertion Sort" olarak verilmiş. 
+Insertion Sort'da soldan başlayarak sağa doğru her itemi solundakiyle kıyaslayarak itemi array'de ki doğru yerine koyuyoruz.
+Kıyasladığımız item solundakinden küçük ise yerlerini değiştiriyoruz, küçük değil büyük ise yerlerini değiştirmeden sorting işlemimize devam ediyoruz.
+
+[22,27,16,2,18,6] --> ilk adımda soldan başlayıp 22'yi atlayıp 27'den başladık çünkü 22'nin solunda kıyaslama yapabileceğimiz bir item yok, ilk adımda olduğu gibi bıraktık çünkü 27 22'den büyük.
+[22,27,16,2,18,6] --> [22,16,27,2,18,6] --> [16,22,27,2,18,6] --> ikinci adımda gördüğünüz gibi 16'yı ilk başta solundaki 27 ile kıyasladık, 
+16 küçük olduğu için yer değiştirdik sonra aynı işlemi 16'yı 22 ile kıyasladık, 16 küçük olduğu için yerlerini değiştirdik. Bu işleme bütün itemleri kontrol edene kadar devam ediyoruz.
+[16,22,27,2,18,6] --> [16,22,2,27,18,6] --> [16,2,22,27,18,6] --> [2,16,22,27,18,6] --> üçüncü adımda da "2" itemini arraydeki doğru yerine koyduk.
+[2,16,22,27,18,6] --> [2,16,22,18,27,6] --> [2,16,18,22,27,6] --> dördüncü adımda 18 16'dan büyük olduğu için 18'i arraydaki olduğu son konumunda bırakıp sorting işlemine devam ediyoruz.
+[2,16,18,22,27,6] --> [2,16,18,22,6,27] --> [2,16,18,6,22,27] --> [2,16,6,18,22,27] --> [2,6,16,18,22,27] --> beşinci adımda da bu diziyi bitiriyoruz.
+Dizinin son hali [2,6,16,18,22,27], Insertion Sort da önemli olan seçtiğimiz itemi solundakine kıyaslayıp, bu işlemi tek tek itemi arraydeki doğru yerine koyana kadar devam ediyoruz.
+
+2) Big-O gösterimini yazınız.
+
+O(n^2)
+
+Insertion Sort'a baktığımızda worst-case olduğunu görüyoruz çünkü işlemin başından sonuna kadar arraydaki bütün itemleri solundakiyle karşılaştırma işlemlerinde yerlerini değiştiriyoruz.
+bu yüzden Big-O notation'ı O(n^2) oluyor 
+
+Selection Sort'a göre de O(n^2):
+Selection Sort'da arraydaki en küçük itemi bulup baştaki item ile yer değiştiriyoruz, sonra ikinci en küçük item bulunup arraydaki ikinci yerdeki item ile yer değiştiriliyor.
+Bu işlem array tamamlanana kadar devam ediyor.
+[22,27,16,2,18,6] n 
+[22,27,16,2,18,6] --> [2,27,16,22,18,6] n-1
+[2,27,16,22,18,6] --> [2,6,16,22,18,27] n-2
+[2,6,16,22,18,27] --> [2,6,16,22,18,27] n-3 
+[2,6,16,22,18,27] --> [2,6,16,18,22,27] n-4
+[2,6,16,18,22,27] 1
+
+
+3)Time Complexity: Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? 
+
+Selection sort için average case olur çünkü 18 sayısı ortadır.
+Insertion sort için best case olur çünkü diziyi çoktan sıraladık ve bu spesifik olay için  time complexity'si O(1) olur.
+
+4) [7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
+
+[7,3,5,8,2,9,4,15,6] n 
+[7,3,5,8,2,9,4,15,6] --> [2,3,5,8,7,9,4,15,6] n-1
+[2,3,5,8,7,9,4,15,6] --> [2,3,4,8,7,9,5,15,6] n-2
+[2,3,4,8,7,9,5,15,6] --> [2,3,4,5,7,9,8,15,6] n-3
+[2,3,4,5,7,9,8,15,6] --> [2,3,4,5,6,9,8,15,7] n-4
+[2,3,4,5,6,9,8,15,7] --> [2,3,4,5,6,7,8,15,9] n-5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
