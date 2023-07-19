@@ -94,7 +94,7 @@ bütün itemleri Binary Search Tree'ye ekleyene kadar devam ediyoruz:
                7
               / \
              5   8
-            / \    \             ------->> Binary Search Tree (BTS) son hali. 
+            / \    \             ------->> Binary Search Tree (BST) son hali. 
            1   6    9
           / \
          0   3
