@@ -1,0 +1,110 @@
+Proje 3
+[7, 5, 1, 8, 3, 6, 0, 9, 4, 2] dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+Örnek: root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
+
+Başlnagıçda kök hangisinin olduğu verilmediği için direk array'in ilk itemi olan  7'yi kök olarak alıp, projeye başlıyorum.
+
+- Başlangıçta root node  7 ile başladık
+
+  7
+
+- Sıradaki itemle root node'u karşılaştırdık (sırada ki item "5"), 5  7'den küçük olduğundan root node yani 7'nin soluna yeni bir node olarak ekledik:
+     
+     7
+    /
+   5
+
+- Sıradaki itemle root node'u karşılaştırdık (sırada ki item "1"), 1  7'den küçük olduğundan root node'dan yani 7'nin solundaki eklediğimiz node'a geçtik, sonra 1'i 5 ile
+karşılaştırdık 1  5'ten küçük olduğundan 5 değerinde ki node'un sol tarafına(dalına) ekledik: 
+
+               7
+              / 
+             5
+            /
+           1
+
+- Sıradaki itemle root node'u karşılaştırdık (sırada ki item "8"), 8  7'den büyük olduğundan root node'un sağ tarafına(dalına) baktık boş olduğundan direk 8 node'unu
+ekledik:
+
+               7
+              / \
+             5   8
+            /
+           1
+
+- Sıradaki itemle root node'u karşılaştırıyoruz (sıradaki ki item "3"), 3  7'den küçük olduğundan solunda ki dala geçiyoruz, solundaki dalın(node'un) değeri 5, 3 5'den
+küçük olduğundan 5 değerindeki node'un soluna geçip onun değeri olan 1 ile karşılaştırıyoruz, 3  1'den büyük olduğundan, 1'in sağ dalına yazıyoruz, ve bu işleme arraydaki 
+bütün itemleri Binary Search Tree'ye ekleyene kadar devam ediyoruz: 
+
+               7
+              / \
+             5   8
+            /
+           1
+            \
+             3
+
+- Sıradaki item "6", 6 7'den küçük bu yüzden sol node'dan devam ettik ama 5'ten büyük, 5'in sağ dalı boş olduğundan 6 yı oraya ekliyoruz: 
+            
+               7
+              / \
+             5   8
+            / \
+           1   6
+            \
+             3
+
+- Sıradaki item "0": 
+
+               7
+              / \
+             5   8
+            / \
+           1   6
+          / \
+         0   3
+
+- Sıradaki item "9": 
+
+               7
+              / \
+             5   8
+            / \    \
+           1   6    9
+          / \
+         0   3
+
+- Sıradaki item "4": 
+
+         
+               7
+              / \
+             5   8
+            / \    \
+           1   6    9
+          / \
+         0   3
+              \
+               4
+
+- Sıradaki ve arraydaki son item "2":
+
+                         
+               7
+              / \
+             5   8
+            / \    \             ------->> Binary Search Tree (BTS) son hali. 
+           1   6    9
+          / \
+         0   3
+            / \
+           2   4
+
+
+
+
+
+
+
+
