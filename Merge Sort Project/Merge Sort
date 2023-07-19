@@ -1,0 +1,32 @@
+Proje 2
+[16,21,11,8,12,22] -> Merge Sort
+
+1) Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+
+Merge Sort bir listeyi her adımda parçaya ayırıp tek eleman kalıncaya kadar bölüyor. Böldükten sonra sıralı bir şekilde bize sunuyor.
+
+                                                                          [16,21,11,8,12,22]
+                                                                          /                 \
+                                                                [16,21,11]                   [8,12,22]
+                                                               /          \                 /         \
+                                                        [16,21]            [11]        [8,12]          [22]
+                                                         /   \              \          /    \           \ 
+                                                    [16]      [21]           [11]   [8]      [12]        [22]
+                                                       \      /               \        \    /             \
+                                                        [16,21]                [11]     [8,12]             [22]
+                                                               \              /               \            /
+                                                                  [11,16,21]                    [8,12,22]
+                                                                            \                   /
+                                                                             \                 /
+                                                                              [8,11,12,16,21,22]   
+
+2) Big-O gösterimini yazınız.
+Merge sort işlemi gerçekleşirken array'in bütün itemleri (üstte olduğu gibi) satırlarda bölme ve birleştirme olayı oluyor. Bu yüzden bir satırdaki  time complexity O(n),
+ama tabi ki bu son Big-O notation değil. Merge sort'da her adımda tek bir item kalana kadar ikiye böldüğümüz için oradan aşşağıda görmüş olduğunuz time complexity hesaplanıyor:
+2^x = n 
+logn = x
+O(logn)
+
+En sonunda bütün Merge Sort işleminin time complexity'sini hesaplamak istediğimizde sonuç:  O(nlogn) 
+
+
