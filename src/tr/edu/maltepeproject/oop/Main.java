@@ -34,6 +34,7 @@ public class Main {
         double sonuc = toplam / 6.0;
         System.out.println("Ortalamanız: " + sonuc);
 
+        // Karşılaştırma ifadelerini kullandık
         String sinifDurum = (sonuc >= 60) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
         System.out.println(sinifDurum);
     }
